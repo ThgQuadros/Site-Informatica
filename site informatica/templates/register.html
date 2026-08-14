@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Registro - TI Pro{% endblock %}
+
+{% block content %}
+<section class="section auth">
+    <h2>Criar conta</h2>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Nome do usuário" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="password" name="password" placeholder="Senha" required>
+        <input type="password" name="confirm" placeholder="Confirmar senha" required>
+        <button type="submit" class="btn">Registrar</button>
+    </form>
+    <p>Já tem conta? <a href="{{ url_for('login') }}">Faça login</a>.</p>
+</section>
+{% endblock %}
